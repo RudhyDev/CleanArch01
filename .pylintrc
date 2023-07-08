@@ -8,6 +8,9 @@ disable=
       C0321, # More than one statement on a single line (multiple-statements)
       W0221, # Arguments number differs from overridden method (arguments-differ)
       R0801, # Similar lines in 2 files (duplicate-code)
+      C0115, # Missing class docstring (missing-class-docstring)
+      R0903, # Too few public methods (1/2) (too-few-public-methods)
+      C0303, # Trailing whitespace (trailing-whitespace)
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists

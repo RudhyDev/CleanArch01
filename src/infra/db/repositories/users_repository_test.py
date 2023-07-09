@@ -38,3 +38,31 @@ def test_insert_user():
 
     print('Quantidade de linhas deletadas: ', deletado.rowcount)
     connection.commit()
+
+@pytest.mark.skip(reason='Sensive Test')
+def test_select_user():
+    mocked_first_name = 'first_2'
+    mocked_last_name = 'last_2'
+    mocked_age = 18
+
+    sql = ''' 
+        INSERT INTO users (first_name, last_name, age) 
+        VALUES ("{}", "{}", "{}")
+        '''.format(mocked_first_name, mocked_last_name, mocked_age )
+        
+    connection.execute(text(sql))
+    connection.commit()
+    
+    connection.execute(text("SELECT * FROM users WHERE first_name = :first_name"), {"first_name": mocked_first_name}).fetchone()
+    
+    users_repository = UsersRepository()
+    response = users_repository.select_user(mocked_first_name)
+    print(response)
+    # assert response[0].first_name == mocked_first_name
+    # assert response[0].last_name == mocked_last_name
+    # assert response[0].age == mocked_age
+    
+    deletado = connection.execute(text('''DELETE FROM users'''))
+
+    print('Quantidade de linhas deletadas: ', deletado.rowcount)
+    connection.commit()

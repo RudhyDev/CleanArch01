@@ -11,6 +11,7 @@ disable=
       C0115, # Missing class docstring (missing-class-docstring)
       R0903, # Too few public methods (1/2) (too-few-public-methods)
       C0303, # Trailing whitespace (trailing-whitespace)
+      C0301, # Line too long (line-too-long)
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists

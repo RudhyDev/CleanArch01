@@ -1,7 +1,7 @@
 astroid==2.15.6
 cffi==1.15.1
 cfgv==3.3.1
-cryptography==41.0.1
+cryptography==42.0.2
 dill==0.3.6
 distlib==0.3.6
 filelock==3.12.2

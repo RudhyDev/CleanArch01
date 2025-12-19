@@ -4,7 +4,7 @@ cfgv==3.3.1
 cryptography==41.0.1
 dill==0.3.6
 distlib==0.3.6
-filelock==3.12.2
+filelock==3.20.1
 greenlet==2.0.2
 identify==2.5.24
 iniconfig==2.0.0
